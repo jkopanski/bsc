@@ -56,7 +56,7 @@ all: install
 .PHONY: install clean full_clean
 install clean full_clean:
 	$(MAKE)  -C vendor/stp   PREFIX=$(PREFIX)  $@
-	$(MAKE)  -C vendor/yices PREFIX=$(PREFIX)  $@
+	$(MAKE)  -C vendor/yices PREFIX=$(PREFIX) LDCONFIG=ldconfig  $@
 	$(MAKE)  -C vendor/htcl  PREFIX=$(PREFIX)  $@
 	# we need to build targets from here sequentially, as they operate in the same workspace
 	$(MAKE)  -C comp -j1   PREFIX=$(PREFIX)  $@

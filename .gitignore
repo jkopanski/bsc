@@ -13,3 +13,5 @@ build
 
 .vagrant/
 vagrant-out/
+
+.direnv/
